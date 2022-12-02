@@ -5,6 +5,7 @@ import { HashRouter as Router, Route } from 'react-router-dom'
 import Header from '../Header/Header';
 import RatingFeedback from '../RatingFeedback/RatingFeedback';
 import Comments from '../Comments/Comments';
+import Review from '../Review/Review';
 import './App.css';
 
 function App() {
@@ -24,6 +25,9 @@ function App() {
         </Route>
         <Route exact path='/comments'>
           <Comments />
+        </Route>
+        <Route exact path='/review'>
+          <Review />
         </Route>
       </Router>
     </div>

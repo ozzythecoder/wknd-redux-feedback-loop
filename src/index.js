@@ -10,8 +10,8 @@ import logger from 'redux-logger';
 
 const ratingsPlaceholder = {
   feelings: '',
-  support: '',
   understanding: '',
+  support: '',
   comments: ''
 }
 

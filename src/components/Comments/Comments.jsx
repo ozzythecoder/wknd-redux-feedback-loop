@@ -18,6 +18,8 @@ export default function Comments() {
       payload: { id: 'comments', content: commentTxtIn }
     })
 
+    history.push('/review');
+
   }
 
   return (
