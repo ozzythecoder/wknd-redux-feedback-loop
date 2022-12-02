@@ -23,9 +23,7 @@ export default function RatingFeedback({ category }) {
   
     dispatch({
       type: 'UPDATE_RATING',
-      payload: {
-        [category]: ratingIn
-      }
+      payload: { id: [category], rating: ratingIn }
     })
 
     history.push( paths[ paths.indexOf(history.location.pathname) + 1 ] )
