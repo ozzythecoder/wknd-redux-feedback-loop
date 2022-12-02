@@ -14,21 +14,27 @@ function App() {
     <div className='App'>
       <Header />
       <Router>
+
         <Route exact path='/feelings'>
           <RatingFeedback category='feelings' />
         </Route>
+
         <Route exact path='/support'>
           <RatingFeedback category='support' />
         </Route>
+
         <Route exact path='/understanding'>
           <RatingFeedback category='understanding' />
         </Route>
+
         <Route exact path='/comments'>
           <Comments />
         </Route>
+
         <Route exact path='/review'>
           <Review />
         </Route>
+        
       </Router>
     </div>
   );

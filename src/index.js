@@ -19,6 +19,8 @@ const ratingsObj = (state = ratingsPlaceholder, action) => {
   switch (action.type) {
     case 'UPDATE_RATING':
       return { ...state, [action.payload.id]: action.payload.content }
+    case 'CLEAR_FEEDBACK':
+      return ratingsPlaceholder;
     default:
       return state;
   }

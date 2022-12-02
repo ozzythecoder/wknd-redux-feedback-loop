@@ -10,6 +10,8 @@ export default function Review() {
   const submitFeedback = (e) => {
     e.preventDefault();
     console.log('in submitFeedback');
+
+    dispatch({ type: 'CLEAR_FEEDBACK' })
   }
 
   return (
