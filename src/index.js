@@ -18,7 +18,7 @@ const ratingsPlaceholder = {
 const ratingsObj = (state = ratingsPlaceholder, action) => {
   switch (action.type) {
     case 'UPDATE_RATING':
-      return { ...state, [action.payload.id]: action.payload.rating }
+      return { ...state, [action.payload.id]: action.payload.content }
     default:
       return state;
   }

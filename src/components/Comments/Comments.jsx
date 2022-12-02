@@ -15,7 +15,7 @@ export default function Comments() {
 
     dispatch({
       type: 'UPDATE_RATING',
-      payload: { id: 'comments', rating: commentTxtIn }
+      payload: { id: 'comments', content: commentTxtIn }
     })
 
   }
