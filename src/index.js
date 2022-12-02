@@ -9,13 +9,13 @@ import { Provider } from 'react-redux';
 import logger from 'redux-logger';
 
 const ratingsPlaceholder = {
-  feelings: 0,
-  support: 0,
-  understanding: 0,
+  feelings: '',
+  support: '',
+  understanding: '',
   comments: ''
 }
 
-const ratingsObj = (state = {}, action) => {
+const ratingsObj = (state = ratingsPlaceholder, action) => {
   return state;
 }
 
