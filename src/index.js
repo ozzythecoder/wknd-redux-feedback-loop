@@ -21,7 +21,7 @@ const ratingsObj = (state = {}, action) => {
 
 const reduxStore = createStore(
   combineReducers({
-
+    ratingsObj
   }),
   applyMiddleware(logger)
 )
