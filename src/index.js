@@ -9,9 +9,9 @@ import { Provider } from 'react-redux';
 import logger from 'redux-logger';
 
 const ratingsPlaceholder = {
-  feelings: '2',
-  support: '3',
-  understanding: '4',
+  feelings: '',
+  support: '',
+  understanding: '',
   comments: ''
 }
 

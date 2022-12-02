@@ -9,15 +9,26 @@ export default function RatingFeedback({ category }) {
 
   const [ ratingIn, setRating ] = useState(useSelector(store => store.ratingsObj[category]))
 
+  const paths = [ '/feelings', '/understanding', '/support', '/comments' ]
+
   const questions = {
     feelings: 'How are you feeling today?',
     understanding: 'How well are you understanding the content?',
     support: 'How well are you being supported?'
   }
 
+
   const handleNext = (e) => {
     e.preventDefault();
-    console.log('in handleNext, rating', ratingIn);
+  
+    dispatch({
+      type: 'UPDATE_RATING',
+      payload: {
+        [category]: ratingIn
+      }
+    })
+
+    history.push( paths[ paths.indexOf(history.location.pathname) + 1 ] )
   }
 
   return (
@@ -30,7 +41,8 @@ export default function RatingFeedback({ category }) {
         max={5}
         onChange={e => setRating(e.target.value)}
       />
-      <button className='next-btn' onClick={handleNext}>NEXT</button><br />
+      <br />
+      <button className='next-btn' onClick={handleNext}>NEXT</button>
       <p>{category}: {ratingIn}</p>
     </div>
   )
