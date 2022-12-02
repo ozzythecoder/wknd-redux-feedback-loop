@@ -4,6 +4,7 @@ import { HashRouter as Router, Route } from 'react-router-dom'
 
 import Header from '../Header/Header';
 import RatingFeedback from '../RatingFeedback/RatingFeedback';
+import Comments from '../Comments/Comments';
 import './App.css';
 
 function App() {
@@ -20,6 +21,9 @@ function App() {
         </Route>
         <Route exact path='/understanding'>
           <RatingFeedback category='understanding' />
+        </Route>
+        <Route exact path='/comments'>
+          <Comments />
         </Route>
       </Router>
     </div>
