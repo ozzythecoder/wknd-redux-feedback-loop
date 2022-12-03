@@ -7,6 +7,7 @@ import RatingFeedback from '../RatingFeedback/RatingFeedback';
 import Comments from '../Comments/Comments';
 import Review from '../Review/Review';
 import './App.css';
+import Home from '../Home/Home';
 
 function App() {
 
@@ -16,7 +17,7 @@ function App() {
       <Router>
 
         <Route exact path='/'>
-          
+          <Home />
         </Route>
 
         <Route exact path='/feelings'>
