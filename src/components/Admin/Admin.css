@@ -1,0 +1,39 @@
+table {
+  margin: 0 auto;
+  border-spacing: 0;
+  border-collapse: collapse;
+  border: 1px solid lightgray;
+}
+
+th {
+  font-weight: 550;
+  padding: 10px;
+}
+
+thead tr {
+  background-color: gray;
+  color: white;
+}
+
+tr {
+  background-color: white;
+}
+
+tr:nth-child(even) {
+  background-color: lightgray;
+}
+
+td {
+  min-width: 120px;
+  padding: 7px;
+  margin: 0;
+}
+
+td.red-bg {
+  font-weight: bold;
+  color: rgb(191, 0, 0);
+}
+
+.comments-cell {
+  min-width: 250px;
+}
