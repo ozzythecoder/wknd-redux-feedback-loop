@@ -6,12 +6,12 @@ export default function Review() {
   const dispatch = useDispatch();
   const history = useHistory();
 
-  const ratings = useSelector(store => store.ratingsObj)
+  const feedbackObj = useSelector(store => store.ratingsObj)
 
   const submitFeedback = (e) => {
     e.preventDefault();
 
-    axios.post('/')
+    axios.post('/feedback', feedbackObj)
       .then(res => {
         dispatch({ type: 'CLEAR_FEEDBACK' })
         history.push('/success');
@@ -24,10 +24,10 @@ export default function Review() {
   return (
     <div>
       <h2>Review your feedback:</h2>
-      <p>Feelings: {ratings.feelings}</p>
-      <p>Understanding: {ratings.understanding}</p>
-      <p>Support: {ratings.support}</p>
-      <p>Comments: {ratings.comments}</p>
+      <p>Feelings: {feedbackObj.feelings}</p>
+      <p>Understanding: {feedbackObj.understanding}</p>
+      <p>Support: {feedbackObj.support}</p>
+      <p>Comments: {feedbackObj.comments}</p>
 
       <button onClick={submitFeedback}>SUBMIT</button>
     </div>
