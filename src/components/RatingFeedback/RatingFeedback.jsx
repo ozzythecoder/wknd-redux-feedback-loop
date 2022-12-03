@@ -41,6 +41,7 @@ export default function RatingFeedback({ category }) {
       />
       <br />
       <button className='next-btn' onClick={handleNext}>NEXT</button>
+      <p className="material-symbols-outlined">chevron_right</p>
       <p>{category}: {ratingIn}</p>
     </div>
   )

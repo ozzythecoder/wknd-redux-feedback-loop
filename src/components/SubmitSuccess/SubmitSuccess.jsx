@@ -4,7 +4,7 @@ export default function SubmitSuccess() {
 
   const history = useHistory();
 
-  const goHome = () => { history.push('/')}
+  const goHome = () => { history.push('/') }
 
   return (
     <div>
