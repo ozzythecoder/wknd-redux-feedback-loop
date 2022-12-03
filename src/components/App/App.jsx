@@ -1,5 +1,4 @@
 import React from 'react';
-import axios from 'axios';
 import { HashRouter as Router, Route } from 'react-router-dom'
 
 import Home from '../Home/Home';
@@ -8,6 +7,8 @@ import RatingFeedback from '../RatingFeedback/RatingFeedback';
 import Comments from '../Comments/Comments';
 import Review from '../Review/Review';
 import Admin from '../Admin/Admin';
+import SubmitSuccess from '../SubmitSuccess/SubmitSuccess';
+
 import './App.css';
 
 function App() {
@@ -41,7 +42,11 @@ function App() {
           <Review />
         </Route>
 
-        <Route exact path ='/admin'>
+        <Route exact path='/success'>
+          <SubmitSuccess />
+        </Route>
+
+        <Route exact path='/admin'>
           <Admin />
         </Route>
         
