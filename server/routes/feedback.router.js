@@ -27,7 +27,7 @@ router.post('/', (req, res) => {
 
 router.get('/', (req, res) => {
 
-  const queryText = `SELECT * FROM feedback`
+  const queryText = `SELECT * FROM feedback ORDER BY date DESC`
   
   pool.query(queryText)
     .then(dbRes => {
