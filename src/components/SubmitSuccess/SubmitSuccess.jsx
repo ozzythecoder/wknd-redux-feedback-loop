@@ -4,11 +4,13 @@ export default function SubmitSuccess() {
 
   const history = useHistory();
 
+  const goHome = () => { history.push('/')}
+
   return (
     <div>
       <h2>Success!</h2>
       <p>Thank you for submitting your feedback!</p>
-      <button onClick={history.push('/')}>RETURN HOME</button>
+      <button onClick={goHome}>RETURN HOME</button>
     </div>
   )
 }
