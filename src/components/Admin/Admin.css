@@ -31,9 +31,23 @@ td {
 
 td.red-bg {
   font-weight: bold;
-  color: rgb(191, 0, 0);
+  color: rgb(220, 0, 0);
 }
 
 .comments-cell {
   min-width: 250px;
+}
+
+.delete-btn {
+  color: darkslategray;
+  border: none;
+  background: transparent;
+}
+
+.delete-btn:hover {
+  color: black;
+}
+
+.delete-btn:active {
+  color: red;
 }

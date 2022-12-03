@@ -33,6 +33,9 @@ export default function Admin() {
           {item.support}</td>
         <td className="comments-cell">{item.comments}</td>
         <td className="date-cell">{new Date(item.date).toLocaleDateString()}</td>
+        <td className="delete-cell">
+          <button className="delete-btn material-symbols-outlined">delete</button>
+        </td>
       </tr>
     )
   })
@@ -48,6 +51,7 @@ export default function Admin() {
             <th>Support</th>
             <th>Comments</th>
             <th>Date</th>
+            <th>Delete</th>
           </tr>
         </thead>
         <tbody>
