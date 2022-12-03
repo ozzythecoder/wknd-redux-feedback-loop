@@ -1,5 +1,6 @@
 import { useSelector, useDispatch } from "react-redux"
 import { useHistory } from "react-router-dom"
+import axios from "axios";
 
 export default function Review() {
   const dispatch = useDispatch();
@@ -9,9 +10,15 @@ export default function Review() {
 
   const submitFeedback = (e) => {
     e.preventDefault();
-    console.log('in submitFeedback');
 
-    dispatch({ type: 'CLEAR_FEEDBACK' })
+    axios.post('/')
+      .then(res => {
+        dispatch({ type: 'CLEAR_FEEDBACK' })
+        history.push('/success');
+      }).catch(err => {
+        alert('Server error. Please try again later.')
+        console.log('axios.post', err);
+      })
   }
 
   return (
