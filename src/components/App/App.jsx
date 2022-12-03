@@ -15,6 +15,10 @@ function App() {
       <Header />
       <Router>
 
+        <Route exact path='/'>
+          
+        </Route>
+
         <Route exact path='/feelings'>
           <RatingFeedback category='feelings' />
         </Route>
