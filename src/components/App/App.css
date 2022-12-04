@@ -75,7 +75,7 @@ button.next-btn:focus, button.text-btn:focus {
   outline: 1px solid darkgray;
 }
 
-button.next-btn:hover, button.text-btn:focus {
+button.next-btn:hover, button.text-btn:hover {
   background-color: lightgray;
 }
 
