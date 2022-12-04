@@ -22,6 +22,8 @@ export default function Review() {
       })
   }
 
+  const moveBack = () => { history.goBack() }
+
   return (
     <div>
       <h2>Review your feedback:</h2>
@@ -31,10 +33,14 @@ export default function Review() {
           <p className="feedback-display-key">Support:</p>       <p className="feedback-display-value">{feedbackObj.support}</p>
           <p className="feedback-display-key">Comments:</p>      <p className="feedback-display-value comments-display">{feedbackObj.comments == '' ? 'No comment' : feedbackObj.comments}</p>
       </div>
-
-      <button
-        className="next-btn text-btn"
-        onClick={submitFeedback}>SUBMIT</button>
+      <div className="form-flex">
+        <button 
+            className='next-btn material-symbols-outlined'
+            onClick={moveBack}>chevron_left</button>
+        <button
+          className="next-btn text-btn"
+          onClick={submitFeedback}>SUBMIT</button>
+      </div>
     </div>
   )
 }
