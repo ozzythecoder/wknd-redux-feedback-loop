@@ -25,12 +25,15 @@ export default function Comments() {
   return (
     <div>
       <h2>Anything else you'd like to add?</h2>
-      <input
-        type='text'
-        value={commentTxtIn}
-        onChange={e => setCommentTxt(e.target.value)}
-      />
-      <button className="next-btn" onClick={handleNext}>REVIEW</button>
+      <div className="form-flex">
+
+        <textarea
+          className="comments"
+          value={commentTxtIn}
+          onChange={e => setCommentTxt(e.target.value)}
+          />
+        <button className="text-btn next-btn" onClick={handleNext}>REVIEW</button>
+      </div>
     </div>
   )
 }
