@@ -26,10 +26,13 @@ export default function Review() {
   return (
     <div>
       <h2>Review your feedback:</h2>
-      <p>Feelings: {feedbackObj.feelings}</p>
-      <p>Understanding: {feedbackObj.understanding}</p>
-      <p>Support: {feedbackObj.support}</p>
-      <p>Comments: {feedbackObj.comments}</p>
+      <div className="review-display">
+
+      <p className="feedback-display-key">Feelings:</p>      <p className="feedback-display-value">{feedbackObj.feelings}</p>
+      <p className="feedback-display-key">Understanding:</p> <p className="feedback-display-value">{feedbackObj.understanding}</p>
+      <p className="feedback-display-key">Support:</p>       <p className="feedback-display-value">{feedbackObj.support}</p>
+      <p className="feedback-display-key">Comments:</p>      <p className="feedback-display-value comments-display">{feedbackObj.comments}</p>
+      </div>
 
       <button
         className="next-btn text-btn"
