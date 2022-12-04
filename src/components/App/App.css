@@ -103,3 +103,14 @@ textarea:hover, textarea:focus {
 textarea:focus {
   border-bottom: 2px solid red;
 }
+
+input[type='number'] {
+  appearance: none;
+  -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  appearance: none;
+  -webkit-appearance: none;
+}

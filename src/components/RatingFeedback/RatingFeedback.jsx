@@ -54,7 +54,7 @@ export default function RatingFeedback({ category }) {
       <div className="form-flex">
 
         <input 
-          type='text'
+          type='number'
           inputMode='numeric'
           className="number-in"
           value={ratingIn}
