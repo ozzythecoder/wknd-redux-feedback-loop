@@ -15,7 +15,6 @@ export default function Review() {
 
     axios.post('/feedback', feedbackObj)
       .then(res => {
-        dispatch({ type: 'CLEAR_FEEDBACK' })
         history.push('/success');
       }).catch(err => {
         alert('Server error. Please try again later.')
