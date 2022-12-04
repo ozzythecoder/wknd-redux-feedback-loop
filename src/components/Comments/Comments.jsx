@@ -19,16 +19,23 @@ export default function Comments() {
     })
 
     history.push('/review');
-
   }
+
+  const moveBack = () => { history.goBack() }
 
   return (
     <div>
       <h2>Anything else you'd like to add?</h2>
       <div className="form-flex">
+        <button 
+          className='next-btn material-symbols-outlined'
+          onClick={ moveBack }>
+            chevron_left
+        </button>
 
         <textarea
           className="comments"
+          placeholder="Additional comments (optional)"
           value={commentTxtIn}
           onChange={e => setCommentTxt(e.target.value)}
           />
