@@ -29,7 +29,7 @@ export default function Review() {
           <p className="feedback-display-key">Feelings:</p>      <p className="feedback-display-value">{feedbackObj.feelings}</p>
           <p className="feedback-display-key">Understanding:</p> <p className="feedback-display-value">{feedbackObj.understanding}</p>
           <p className="feedback-display-key">Support:</p>       <p className="feedback-display-value">{feedbackObj.support}</p>
-          <p className="feedback-display-key">Comments:</p>      <p className="feedback-display-value comments-display">{feedbackObj.comments}</p>
+          <p className="feedback-display-key">Comments:</p>      <p className="feedback-display-value comments-display">{feedbackObj.comments == '' ? 'No comment' : feedbackObj.comments}</p>
       </div>
 
       <button

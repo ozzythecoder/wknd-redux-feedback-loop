@@ -65,6 +65,7 @@ input:focus {
 }
 
 button {
+  font-family: Georgia, 'Times New Roman', Times, serif;
   background: none;
   border: none;
   min-height: 50px;
@@ -100,6 +101,7 @@ textarea {
   font-size: 16px;
   height: 4em;
   resize: none;
+  padding: 5px;
   border: none;
   border-bottom: 1px solid blue;
   outline: none;

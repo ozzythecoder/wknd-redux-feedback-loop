@@ -11,7 +11,7 @@ export default function RatingFeedback({ category }) {
 
   const [ ratingIn, setRating ] = useState(useSelector(store => store.ratingsObj[category]))
 
-  const paths = [ '/feelings', '/understanding', '/support', '/comments' ]
+  const paths = [ '/', '/feelings', '/understanding', '/support', '/comments' ]
 
   const questions = {
     feelings: 'How are you feeling today?',
@@ -44,7 +44,10 @@ export default function RatingFeedback({ category }) {
     } else {
       return true;
     }
+  }
 
+  const moveBack = () => {
+    history.push( paths[ paths.indexOf(history.location.pathname) - 1 ] )
   }
 
   return (
@@ -52,6 +55,11 @@ export default function RatingFeedback({ category }) {
       <h2>{questions[category]}</h2>
       <h4>On a scale of 1 to 5:</h4>
       <div className="form-flex">
+        <button 
+          className='next-btn material-symbols-outlined'
+          onClick={ moveBack }>
+            chevron_left
+        </button>
 
         <input 
           type='number'
