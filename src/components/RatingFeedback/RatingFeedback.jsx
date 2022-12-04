@@ -22,6 +22,8 @@ export default function RatingFeedback({ category }) {
 
   const handleNext = (e) => {
     e.preventDefault();
+
+    if(!validInput()) return false;
   
     dispatch({
       type: 'UPDATE_RATING',
@@ -29,6 +31,20 @@ export default function RatingFeedback({ category }) {
     })
 
     history.push( paths[ paths.indexOf(history.location.pathname) + 1 ] )
+  }
+
+  const validInput = () => {
+
+    if (ratingIn == '') {
+      alert('You must enter a number.')
+      return false;
+    } else if (ratingIn > 5 || ratingIn < 1) {
+      alert('Your rating must be a number from 1 to 5.')
+      return false;
+    } else {
+      return true;
+    }
+
   }
 
   return (
