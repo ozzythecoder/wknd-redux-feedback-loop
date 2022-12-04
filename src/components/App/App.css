@@ -32,3 +32,47 @@ body {
 h4 {
   font-style: italic;
 }
+
+input {
+  font-size: 24px;
+  border: none;
+  width: 50px;
+  outline: none;
+  border-bottom: 1px solid blue;
+  padding: 5px 75px;
+}
+
+input:hover {
+  background: rgb(235, 235, 235)
+}
+
+input.number-in {
+  text-align: center;
+}
+
+input:focus {
+  border-bottom: 2px solid red;
+}
+
+button {
+  background: none;
+  border: none;
+  min-height: 50px;
+  min-width: 50px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+button.text-btn {
+  font-weight: bold;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+button:focus {
+  outline: 1px solid darkgray;
+}
+
+button:hover {
+  background-color: lightgray;
+}

@@ -12,7 +12,9 @@ export default function Home() {
     <div>
       <h2>Welcome!</h2>
       <h3>Let's get started on your feedback.</h3>
-      <button onClick={beginReview}>BEGIN</button>
+      <button
+        className="text-btn"
+        onClick={beginReview}>BEGIN</button>
     </div>
   )
 }
