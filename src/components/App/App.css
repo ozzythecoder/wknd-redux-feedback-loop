@@ -29,6 +29,15 @@ body {
   font-size: large;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color:rgb(200, 200, 200)
+}
+
 h4 {
   font-style: italic;
 }
