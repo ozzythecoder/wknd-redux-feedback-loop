@@ -2,6 +2,8 @@ import { useSelector, useDispatch } from "react-redux"
 import { useHistory } from "react-router-dom"
 import axios from "axios";
 
+import './Review.css'
+
 export default function Review() {
   const dispatch = useDispatch();
   const history = useHistory();
@@ -29,7 +31,9 @@ export default function Review() {
       <p>Support: {feedbackObj.support}</p>
       <p>Comments: {feedbackObj.comments}</p>
 
-      <button onClick={submitFeedback}>SUBMIT</button>
+      <button
+        className="next-btn text-btn"
+        onClick={submitFeedback}>SUBMIT</button>
     </div>
   )
 }

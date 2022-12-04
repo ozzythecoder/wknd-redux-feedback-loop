@@ -61,6 +61,7 @@ button {
   min-height: 50px;
   min-width: 50px;
   margin-left: 10px;
+  margin-right: 10px;
   cursor: pointer;
 }
 
@@ -70,11 +71,11 @@ button.text-btn {
   padding-right: 20px;
 }
 
-button:focus {
+button.next-btn:focus, button.text-btn:focus {
   outline: 1px solid darkgray;
 }
 
-button:hover {
+button.next-btn:hover, button.text-btn:focus {
   background-color: lightgray;
 }
 
