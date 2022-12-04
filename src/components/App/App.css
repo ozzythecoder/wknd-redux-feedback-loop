@@ -96,11 +96,10 @@ textarea {
   outline: none;
 }
 
-textarea:focus {
-  border: 1px solid lightgray;
-  border-bottom: 2px solid red;
+textarea:hover, textarea:focus {
+  background-color: rgb(235, 235, 235);
 }
 
-textarea:hover {
-  background-color: rgb(235, 235, 235)
+textarea:focus {
+  border-bottom: 2px solid red;
 }

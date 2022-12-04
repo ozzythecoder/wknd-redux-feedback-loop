@@ -3,8 +3,12 @@
   margin: 0 auto;
   padding: 10px 20px;
   max-width: 340px;
-  grid-template-columns: 2fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr minmax(1fr, 4fr);
+}
+
+.feedback-display-key {
+  text-decoration: underline;
 }
 
 .feedback-display-key {
@@ -13,7 +17,6 @@
 }
 
 .feedback-display-value {
-  /* margin-right: 40%; */
   text-align: right;
 }
 .feedback-display-value:not(.comments-display) {
